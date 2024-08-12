@@ -18,14 +18,14 @@ Write-Host "Creating a virtual network ..."
 Write-Host "Creating a virtual network $virtualNetworkName with address space $vnetAddressPrefix ..."
 $vnet = New-AzVirtualNetwork -ResourceGroupName $resourceGroupName -Location $location -Name $virtualNetworkName -AddressPrefix $vnetAddressPrefix
 
-Write-Host "Adding subnet $webSubnetName with address range $webSubnetIpRange ..."
-Add-AzVirtualNetworkSubnetConfig -Name $webSubnetName -AddressPrefix $webSubnetIpRange -VirtualNetwork $vnet
+# Додавання підмереж окремо
+$webSubnet = New-AzVirtualNetworkSubnetConfig -Name $webSubnetName -AddressPrefix $webSubnetIpRange
+$dbSubnet = New-AzVirtualNetworkSubnetConfig -Name $dbSubnetName -AddressPrefix $dbSubnetIpRange
+$mngSubnet = New-AzVirtualNetworkSubnetConfig -Name $mngSubnetName -AddressPrefix $mngSubnetIpRange
 
-Write-Host "Adding subnet $dbSubnetName with address range $dbSubnetIpRange ..."
-Add-AzVirtualNetworkSubnetConfig -Name $dbSubnetName -AddressPrefix $dbSubnetIpRange -VirtualNetwork $vnet
-
-Write-Host "Adding subnet $mngSubnetName with address range $mngSubnetIpRange ..."
-Add-AzVirtualNetworkSubnetConfig -Name $mngSubnetName -AddressPrefix $mngSubnetIpRange -VirtualNetwork $vnet
+$vnet.Subnets.Add($webSubnet)
+$vnet.Subnets.Add($dbSubnet)
+$vnet.Subnets.Add($mngSubnet)
 
 Write-Host "Applying the configuration..."
 $vnet | Set-AzVirtualNetwork
