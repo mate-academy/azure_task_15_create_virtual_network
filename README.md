@@ -23,7 +23,7 @@ Here is how to complete tasks in this module:
 
 5. Run `scripts/validate-artifacts.ps1` to test yourself. If tests are failing - follow the recomendation from the test script error message to fix or re-deploy your infrastructure. When you will be ready to test yourself again - **re-generate the artifacts** (step 4) and re-run tests again. 
 
-6. When all tests will pass - commit your changes and submit the solution for a review. 
+6. When all tests will pass - commit your changes and submit the solution for a review.
 
 Pro tip: if you stuck with any of the implementation steps - run `scripts/generate-artifacts.ps1` and `scripts/validate-artifacts.ps1`. The validation script might give you a hint on what you should do.  
 
@@ -60,9 +60,9 @@ If you are a Windows user, before running this command, please also run the foll
 
 In this task, you will need to plan and deploy Azure Virtual Network. 
 
-The virtual network should satisfy the following requirements: 
+The virtual network should satisfy the following requirements:
 - Virtual Network address space (ip address range): 10.20.30.0/24
-- Virtual Network should have 3 subnets: 
+- Virtual Network should have 3 subnets:
     - `webservers`
     - `database`
     - `management`
@@ -70,7 +70,7 @@ The virtual network should satisfy the following requirements:
 
 To complete the task, you need to perform the following steps: 
 
-1. Calculate IP address ranges for your subnets. You can do it either following the approach, described in the learning matterials, or using the [online tool](https://www.davidc.net/sites/default/subnets/subnets.html). 
+1. Calculate IP address ranges for your subnets. You can do it either following the approach, described in the learning matterials, or using the [online tool](https://www.davidc.net/sites/default/subnets/subnets.html).
 
 2. Update the Powershell script `task.ps1` to add deployment of the Virtual Network and subnets using Powershell module for Azure: 
 
