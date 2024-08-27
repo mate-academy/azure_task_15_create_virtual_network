@@ -72,9 +72,9 @@ To complete the task, you need to perform the following steps:
 
 1. Calculate IP address ranges for your subnets. You can do it either following the approach, described in the learning matterials, or using the [online tool](https://www.davidc.net/sites/default/subnets/subnets.html).
 
-2. Update the Powershell script `task.ps1` to add deployment of the Virtual Network and subnets using Powershell module for Azure: 
+2. Update the Powershell script `task.ps1` to add deployment of the Virtual Network and subnets using Powershell module for Azure:
 
-    - Virtual Network resource should be deployed to the resource group `mate-azure-task-15`, it should be called `todoapp`. Normally, we would recommend defining a naming convention, and call it like `dev-todoapp-uksouth-vnet`, but just for the validation purposes it is easier for us to go with `todoapp`. 
+    - Virtual Network resource should be deployed to the resource group `mate-azure-task-15`, it should be called `todoapp`. Normally, we would recommend defining a naming convention, and call it like `dev-todoapp-uksouth-vnet`, but just for the validation purposes it is easier for us to go with `todoapp`.
 
     - To learn how to deploy Virtual Network and subnets, check the documentation of [New-AzVirtualNetwork](https://learn.microsoft.com/en-us/powershell/module/az.network/new-azvirtualnetwork?view=azps-12.1.0#example-3-create-a-virtual-network-with-a-subnet-referencing-a-network-security-group) (For now, skip the security group parameters - they are not mandatory)
 
