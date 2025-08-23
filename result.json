@@ -1,0 +1,23 @@
+{
+  "resourceGroup": "mate-azure-task-15",
+  "location": "westeurope",
+  "vnetName": "todoapp",
+  "addressSpace": "10.20.30.0/24",
+  "subnets": [
+    {
+      "usableIPs": 59,
+      "prefix": "10.20.30.0/26",
+      "name": "webservers"
+    },
+    {
+      "usableIPs": 59,
+      "prefix": "10.20.30.64/26",
+      "name": "database"
+    },
+    {
+      "usableIPs": 59,
+      "prefix": "10.20.30.128/26",
+      "name": "management"
+    }
+  ]
+}
