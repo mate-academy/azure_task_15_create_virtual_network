@@ -1,0 +1,13 @@
+Reading config
+Checking if temp folder exists
+Downloading artifacts
+Validating artifacts
+✅ Checked if virtual network exists - OK.
+✅ Checked the virtual network name - OK.
+✅ Checked the virtual network address space - OK.
+✅ Checked if 3 subnets exist - OK.
+✅ Checked webservers subnet - OK.
+✅ Checked database subnet - OK.
+✅ Checked management subnet - OK.
+
+🥳 Congratulations! All tests passed!
