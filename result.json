@@ -1,23 +1,24 @@
-# Створіть базовий result.json файл
-@'
 {
   "virtualNetwork": {
     "name": "todoapp",
+    "resourceGroup": "mate-azure-task-15",
     "addressSpace": "10.20.30.0/24",
     "subnets": [
       {
         "name": "webservers",
-        "addressPrefix": "10.20.30.0/26"
+        "addressPrefix": "10.20.30.0/26",
+        "usableIPs": 59
       },
       {
-        "name": "database", 
-        "addressPrefix": "10.20.30.64/26"
+        "name": "database",
+        "addressPrefix": "10.20.30.64/26", 
+        "usableIPs": 59
       },
       {
         "name": "management",
-        "addressPrefix": "10.20.30.128/26"
+        "addressPrefix": "10.20.30.128/26",
+        "usableIPs": 59
       }
     ]
   }
 }
-'@ | Set-Content -Path "result.json" -Encoding UTF8
