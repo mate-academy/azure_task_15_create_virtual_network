@@ -15,7 +15,7 @@ $artifactsConfigPath = "$PWD/artifacts.json"
 # initial validation
 Write-Output "Running initial validation"
 $context = Get-AzContext  
-if ($context)   
+if ($context)
 {  
     Write-Output "Azure Powershell module is installed, account is connected."  
 } else {  
