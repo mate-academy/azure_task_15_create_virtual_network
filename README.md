@@ -17,7 +17,7 @@ Here is how to complete tasks in this module:
 
 2. Make sure you completed steps, described in the Prerequisites section
 
-3. Complete the task, described in the Requirements section 
+3. Complete the task, described in the Requirements section
 
 4. Run `scripts/generate-artifacts.ps1` to generate task artifacts. Script will update the file `artifacts.json` in this repo. 
 
@@ -42,11 +42,11 @@ Before completing any task in the module, make sure that you followed all the st
     pwsh
     ```
 
-5. Install [Azure module for PowerShell 7](https://learn.microsoft.com/en-us/powershell/azure/install-azure-powershell?view=azps-11.3.0): 
+5. Install [Azure module for PowerShell 7](https://learn.microsoft.com/en-us/powershell/azure/install-azure-powershell?view=azps-11.3.0):
     ```
     Install-Module -Name Az -Repository PSGallery -Force
     ```
-If you are a Windows user, before running this command, please also run the following: 
+If you are a Windows user, before running this command, please also run the following:
     ```
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
     ```
@@ -72,7 +72,7 @@ To complete the task, you need to perform the following steps:
 
 1. Calculate IP address ranges for your subnets. You can do it either following the approach, described in the learning matterials, or using the [online tool](https://www.davidc.net/sites/default/subnets/subnets.html). 
 
-2. Update the Powershell script `task.ps1` to add deployment of the Virtual Network and subnets using Powershell module for Azure: 
+2. Update the Powershell script `task.ps1` to add deployment of the Virtual Network and subnets using Powershell module for Azure:
 
     - Virtual Network resource should be deployed to the resource group `mate-azure-task-15`, it should be called `todoapp`. Normally, we would recommend defining a naming convention, and call it like `dev-todoapp-uksouth-vnet`, but just for the validation purposes it is easier for us to go with `todoapp`. 
 
