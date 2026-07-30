@@ -15,7 +15,6 @@ New-AzResourceGroup -Name $resourceGroupName -Location $location
 
 Write-Host "Creating a virtual network ..."
 # write your code here -> 
-New-AzResourceGroup -Name $virtualNetworkName -Location $location
 $webSubnet = New-AzVirtualNetworkSubnetConfig -Name $webSubnetName -AddressPrefix $webSubnetIpRange
 $dbSubnet  = New-AzVirtualNetworkSubnetConfig -Name $dbSubnetName  -AddressPrefix $dbSubnetIpRange
 $mngSubnet = New-AzVirtualNetworkSubnetConfig -Name $mngSubnetName -AddressPrefix $mngSubnetIpRange
